@@ -1,4 +1,0 @@
-../Core/Src/interrupt.c:20:6:EXTI0_IRQHandler	3
-../Core/Src/interrupt.c:36:6:EXTI1_IRQHandler	3
-../Core/Src/interrupt.c:52:6:EXTI4_IRQHandler	3
-../Core/Src/interrupt.c:68:6:EXTI3_IRQHandler	3

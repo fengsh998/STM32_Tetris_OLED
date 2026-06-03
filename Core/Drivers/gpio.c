@@ -19,7 +19,7 @@ void GPIO_Init(void)
     
     /* 2. 关键：关闭 JTAG 功能，只保留 SW-DP（释放 PB3, PB4, PA15） */
     AFIO->MAPR &= ~AFIO_MAPR_SWJ_CFG;
-    AFIO->MAPR |= AFIO_MAPR_SWJ_CFG_JTAGDISABLE; // 0x02000000
+    AFIO->MAPR |= AFIO_MAPR_SWJ_CFG_JTAGDISABLE;
 
     /* --- Configure PA2 (CS) as output push-pull --- */
     temp = GPIOA->CRL;

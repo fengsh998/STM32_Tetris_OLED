@@ -1,4 +1,0 @@
-../Core/Drivers/spi.c:12:6:SPI_Init	1
-../Core/Drivers/spi.c:45:6:SPI_Write	3
-../Core/Drivers/spi.c:63:9:SPI_Read	3
-../Core/Drivers/spi.c:81:6:SPI_WriteBytes	2

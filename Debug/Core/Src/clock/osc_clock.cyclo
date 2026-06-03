@@ -1,4 +1,0 @@
-../Core/Src/clock/osc_clock.c:23:6:SystemClock_Config	1
-../Core/Src/clock/osc_clock.c:30:6:SystemClock_HSE_Config	4
-../Core/Src/clock/osc_clock.c:71:6:SystemClock_LSE_Config	2
-../Core/Src/clock/osc_clock.c:93:6:SystemClock_LSE_Config_Def	2

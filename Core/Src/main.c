@@ -31,6 +31,8 @@ int main(void)
 
 	uint32_t last_refresh = 0;
 	uint8_t start_button_pressed = 0;
+	uint8_t screen_needs_update = 1;
+
 	GPIO_Init();            /* Initialize GPIO pins */
 	EXTI_Init();            /* Initialize external interrupts for buttons */
 	SPI_Init();             /* Initialize SPI1 */
@@ -64,6 +66,7 @@ int main(void)
 					Tetris_Init(); /* 初始化/开始新游戏 */
 					Graphics_RefreshDisplay(); /* 绘制初始游戏画面 */
 					last_refresh = get_tick_ms();
+					screen_needs_update = 1;
 				}
 			} else {
 				/* 所有按键都等于 1（即全部松开）时，重置标志位 */
@@ -80,7 +83,10 @@ int main(void)
 			}
 		} else if (game.game_state == GAME_STATE_GAMEOVER) {
 			/* Display game over screen */
-			Graphics_DrawGameOver();
+			if (screen_needs_update) {
+				Graphics_DrawGameOver(); // 只在状态切换时调用一次
+				screen_needs_update = 0; // 停止频繁重绘
+			}
 
 			/* 读取4个按键的状态 */
 			uint8_t btn0 = GPIO_ReadPin(GPIOB, 0);
@@ -91,9 +97,10 @@ int main(void)
 			/* 核心修复：结束界面同样，任意键按下返回菜单 */
 			if (btn0 == 0 || btn1 == 0 || btn3 == 0 || btn4 == 0) {
 				if (!start_button_pressed) {
-					start_button_pressed = 1;
 					game.game_state = GAME_STATE_MENU;
 					Graphics_DrawMenu();
+					screen_needs_update = 1;
+					start_button_pressed = 1;
 				}
 			} else {
 				start_button_pressed = 0;
