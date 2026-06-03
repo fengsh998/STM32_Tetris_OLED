@@ -1,0 +1,6 @@
+../Core/Src/debug_log.c:50:6:debug_uart_init	5
+../Core/Src/debug_log.c:111:6:debug_putchar	2
+../Core/Src/debug_log.c:123:6:debug_puts	3
+../Core/Src/debug_log.c:137:6:debug_printf	2
+../Core/Src/debug_log.c:153:6:debug_log	2
+../Core/Src/debug_log.c:174:6:debug_hex_dump	3

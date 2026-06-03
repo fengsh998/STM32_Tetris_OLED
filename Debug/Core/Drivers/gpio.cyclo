@@ -1,0 +1,7 @@
+../Drivers/CMSIS/Include/core_cm3.h:1511:22:__NVIC_EnableIRQ	2
+../Drivers/CMSIS/Include/core_cm3.h:1639:22:__NVIC_SetPriority	2
+../Core/Drivers/gpio.c:13:6:GPIO_Init	1
+../Core/Drivers/gpio.c:89:6:GPIO_SetPin	1
+../Core/Drivers/gpio.c:97:6:GPIO_ResetPin	1
+../Core/Drivers/gpio.c:106:9:GPIO_ReadPin	1
+../Core/Drivers/gpio.c:114:6:EXTI_Init	1

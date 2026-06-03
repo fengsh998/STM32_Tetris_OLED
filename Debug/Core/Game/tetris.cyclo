@@ -1,0 +1,17 @@
+../Core/Game/tetris.c:69:16:Get_Tetromino_Shape	8
+../Core/Game/tetris.c:88:9:Tetris_CheckCollision	9
+../Core/Game/tetris.c:123:6:Tetris_PlaceTetromino	8
+../Core/Game/tetris.c:146:6:Tetris_ClearLines	10
+../Core/Game/tetris.c:201:6:Tetris_GenerateNext	1
+../Core/Game/tetris.c:213:6:Tetris_Init	4
+../Core/Game/tetris.c:248:6:Tetris_Update	5
+../Core/Game/tetris.c:283:6:Tetris_MoveLeft	3
+../Core/Game/tetris.c:296:6:Tetris_MoveRight	3
+../Core/Game/tetris.c:309:6:Tetris_MoveDown	3
+../Core/Game/tetris.c:323:6:Tetris_Rotate	3
+../Core/Game/tetris.c:340:6:Tetris_Pause	3
+../Core/Game/tetris.c:352:6:Tetris_GameOver	1
+../Core/Game/tetris.c:360:9:Tetris_IsGameOver	1
+../Core/Game/tetris.c:368:10:Tetris_GetScore	1
+../Core/Game/tetris.c:376:10:Tetris_GetLines	1
+../Core/Game/tetris.c:384:9:Tetris_GetLevel	1
