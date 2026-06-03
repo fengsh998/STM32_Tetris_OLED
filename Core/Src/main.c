@@ -59,7 +59,7 @@ int main(void)
 			uint8_t btn3 = GPIO_ReadPin(GPIOB, 3);
 			uint8_t btn4 = GPIO_ReadPin(GPIOB, 4);
 
-			/* 核心修复：只要其中任意一个按键等于 0，就说明有按键被按下了 */
+			/* 核心修复：只要其中任意一个按键等于 0，就说明有按键被按下了，即任意键开始游戏 */
 			if (btn0 == 0 || btn1 == 0 || btn3 == 0 || btn4 == 0) {
 				if (!start_button_pressed) {
 					start_button_pressed = 1;
